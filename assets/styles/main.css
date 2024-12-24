@@ -15,19 +15,13 @@
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-a {
-  text-decoration: none;
-}
-ul {
-  list-style: none;
-}
 section {
   padding: 20px 0;
 }
 .d-flex {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .flex {
@@ -40,9 +34,9 @@ section {
   color: var(--title-color);
 }
 .section-description {
-  margin: 20px 0;
-  color: var(--text-color);
+  margin: 25px 0;
   line-height: 1.5;
+  color: var(--text-color);
 }
 .text-center {
   text-align: center;
@@ -52,13 +46,12 @@ section {
 }
 .section-btn {
   display: block;
-  min-width: 150px;
-  max-width: fit-content;
-  padding: 10px;
+  width: 180px;
+  padding: 10px 15px;
   text-align: center;
-  color: var(--white);
-  background-color: var(--main-color);
   border-radius: 2px;
+  color: var(--white);
+  background-color: var(--title-color);
 }
 .bg-white {
   background-color: var(--white);
@@ -91,7 +84,6 @@ img {
     width: 1170px;
   }
 }
-
 header {
   position: sticky;
   top: 0;
@@ -105,11 +97,12 @@ header .logo a {
   gap: 10px;
   font-weight: bold;
   font-size: 22px;
+  color: #314285;
 }
 header nav ul li a {
   color: var(--text-color);
 }
-header nav ul li a:hover{
+header nav ul li a:hover {
   color: var(--alt-bg);
 }
 
@@ -136,6 +129,7 @@ header nav ul li:last-child a {
     display: none;
     min-width: 250px;
     border: 1px solid rgb(0 0 0 / 0.1);
+    background-color: var(--alt-text-color);
   }
   header nav ul li:not(:last-child) {
     border-bottom: 1px solid rgb(0 0 0 / 0.1);
@@ -158,6 +152,33 @@ header nav ul li:last-child a {
 header .container {
   color: var(--text-color);
 }
-nav ul li a{
+nav ul li a {
   padding: 20px;
 }
+.hero h1 {
+  font-size: 50px;
+  color: var(--title-color);
+}
+.hero .col .section-btn:last-child {
+  border: 1px solid var(--title-color);
+  color: var(--title-color);
+  background-color: transparent;
+}
+.hero .col .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 991px) {
+  .hero .col .image {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .hero .col .image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+  }
+} 
